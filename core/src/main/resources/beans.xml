@@ -4,6 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="numberGenerator" class="matyja.projects.NumberGeneratorImp" />
+    <bean id="numberGenerator" class="matyja.projects.NumberGeneratorImpl" />
+    <bean id="game" class="matyja.projects.GameImpl">
+         <constructor-arg ref="numberGenerator"/>
+    </bean>
 
 </beans>

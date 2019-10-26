@@ -2,7 +2,7 @@ package matyja.projects;
 
 import java.util.Random;
 
-public class NumberGeneratorImp implements NumberGenerator {
+public class NumberGeneratorImpl implements NumberGenerator {
 
     // == fields ==
     private final Random random = new Random();
