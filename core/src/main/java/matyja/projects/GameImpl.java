@@ -23,6 +23,7 @@ public class GameImpl implements Game {
     private boolean validNumberRange = true;
 
 
+
     // == Init methods ==
 
     @Override

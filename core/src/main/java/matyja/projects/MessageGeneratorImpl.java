@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-
+import javax.annotation.PostConstruct;
 
 public class MessageGeneratorImpl implements MessageGenerator {
 
@@ -15,6 +15,12 @@ public class MessageGeneratorImpl implements MessageGenerator {
     @Autowired
     private Game game;
     private int guessCount = 10;
+
+    //== Init ==
+    @PostConstruct
+    public void init() {
+        log.info("game = {}", game);
+    }
 
     // == Public methods ==
 
@@ -34,9 +40,9 @@ public class MessageGeneratorImpl implements MessageGenerator {
         }else if(game.getRemainingGuessess()==guessCount){
             return "Give it a try, what is your first guess? ";
         }else{
-            String direction = "lower";
-                    if(game.getGuess()>game.getNumber()){
-                        direction = "higher";
+            String direction = "Lower";
+                    if(game.getGuess()<game.getNumber()){
+                        direction = "Higher";
                     }
                     return direction + " try again! You have: "+ game.getRemainingGuessess() +
                             " guesses left";
