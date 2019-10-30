@@ -33,7 +33,9 @@ public class ConsoleNumberGuess  {
     public void start(ContextRefreshedEvent contextRefreshedEvent) {
 
         game.reset();
-        log.info("Start() ---> Container Ready For USE");
+
+        System.out.println(messageGenerator.getStartingMessage());
+       // log.info("Start() ---> Container Ready For USE");
 
         Scanner scanner = new Scanner(System.in);
 

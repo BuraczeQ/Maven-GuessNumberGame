@@ -1,10 +1,13 @@
-package matyja.projects;
+package matyja.projects.config;
 
+import matyja.projects.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 @Configuration
+@Import(GameConfig.class)
 @ComponentScan(basePackages = "matyja.projects")
 public class AppConfig   {
 

@@ -1,6 +1,6 @@
 package matyja.projects.console;
 
-import matyja.projects.AppConfig;
+import matyja.projects.config.AppConfig;
 import matyja.projects.Game;
 import matyja.projects.MessageGenerator;
 import matyja.projects.NumberGenerator;

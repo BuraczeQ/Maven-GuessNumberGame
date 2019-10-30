@@ -14,7 +14,7 @@ public class MessageGeneratorImpl implements MessageGenerator {
     //== Fields ==
     @Autowired
     private Game game;
-    private int guessCount = 10;
+
 
     //== Init ==
     @PostConstruct
@@ -24,11 +24,17 @@ public class MessageGeneratorImpl implements MessageGenerator {
 
     // == Public methods ==
 
+
+    @Override
+    public String getStartingMessage() {
+        return "Welcome To My Guess Game!\nYour task will be to guess the number between 1 and 100," +
+                " are you ready?" ;
+    }
+
     @Override
     public String getMainMessage() {
-        return "This is Guess Game Challenge!!! \n" +
-                "The number is between " + game.getSmallest() +
-                " and " + game.getBiggest() + " \nCan You Guess It?";
+        return  "The number is between " + game.getSmallest() +
+                " and " + game.getBiggest() ;
     }
 
     @Override
@@ -36,8 +42,8 @@ public class MessageGeneratorImpl implements MessageGenerator {
         if(game.isGameVon()){
             return  "You guessed correctly, the number was "+game.getNumber();
         }else if(game.isGameLost()){
-            return  "You failed to guess the number you were looking for were" + game.getNumber();
-        }else if(game.getRemainingGuessess()==guessCount){
+            return  "You failed to guess the number you were looking for were " + game.getNumber();
+        }else if(game.getRemainingGuessess()==game.getGuessCount()){
             return "Give it a try, what is your first guess? ";
         }else{
             String direction = "Lower";
