@@ -17,10 +17,14 @@ public class AppConfig   {
         return new NumberGeneratorImpl();
     }
 
-    @Bean public Game game(){
+    @Bean
+    public Game game(){
         return new GameImpl();
     }
-    @Bean public MessageGenerator messageGenerator(){
+
+    @Bean
+    public MessageGenerator messageGenerator()
+    {
         return new MessageGeneratorImpl();
     }
 }

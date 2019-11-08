@@ -1,8 +1,11 @@
 matyja\projects\NumberGeneratorImpl.class
-matyja\projects\Game.class
-matyja\projects\GameImpl.class
 matyja\projects\MessageGenerator.class
 matyja\projects\NumberGenerator.class
-matyja\projects\MessageGeneratorImpl.class
-matyja\projects\config\AppConfig.class
+matyja\projects\MaxNumber.class
 matyja\projects\config\GameConfig.class
+matyja\projects\Game.class
+matyja\projects\GameImpl.class
+matyja\projects\MinNumber.class
+matyja\projects\MessageGeneratorImpl.class
+matyja\projects\GuessCount.class
+matyja\projects\config\AppConfig.class

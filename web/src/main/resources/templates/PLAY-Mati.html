@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Guess The Number Game </title>
+</head>
+
+
+
+FIND A FU CKING MISTAKE LOL LOL LOL
+
+<body>
+<div align="center">
+    <h1>Guess The Number Game</h1>
+    <h3 th:text="${__${T(matyja.projects.util.AtributeNames).MAIN_MESSAGE}__}">
+        Content of main message
+    </h3>
+
+    <h3 th:text="${__${T(matyja.projects.util.AtributeNames).RESULT_MESSAGE}__}">
+        Result of main message
+    </h3>
+    <form th:action="@{__${T(matyja.projects.util.GameMappings}.PLAY__}" action="play" method="post">
+
+        <label for="guess">Enter your guess</label>
+        <input id="guess" type="number" name="guess"/>
+        <input type="submit" name="submit"/>
+
+    </form>
+    <footer>
+        <p>Created By Mateusz Burasinski</p>
+    </footer>
+</div>
+</body>
+</html>

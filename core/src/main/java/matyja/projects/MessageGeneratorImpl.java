@@ -3,9 +3,11 @@ package matyja.projects;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
+@Component
 public class MessageGeneratorImpl implements MessageGenerator {
 
     //== Constants ==
@@ -27,7 +29,7 @@ public class MessageGeneratorImpl implements MessageGenerator {
 
     @Override
     public String getStartingMessage() {
-        return "Welcome To My Guess Game!\nYour task will be to guess the number between 1 and 100," +
+        return "Welcome To My Guess Game!\nYour task will be to guess the number between "+game.getGuess()+ " and "+ game.getBiggest() +
                 " are you ready?" ;
     }
 

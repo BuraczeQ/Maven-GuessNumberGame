@@ -1,0 +1,8 @@
+matyja\projects\config\WebConfig.class
+matyja\projects\util\AtributeNames.class
+matyja\projects\WebMain.class
+matyja\projects\service\GameService.class
+matyja\projects\util\GameMappings.class
+matyja\projects\controller\GameController.class
+matyja\projects\util\ViewNames.class
+matyja\projects\service\GameServiceImpl.class
