@@ -1,0 +1,5 @@
+<thlogic>
+<attr   sel="#footerID"
+        th:align="center" th:fragment="footFragment"/>
+<attr sel="#createdBy" th:text="|#{game.createdBy} Mateusz Burasinski|" />
+</thlogic>

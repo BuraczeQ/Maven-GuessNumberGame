@@ -1,0 +1,21 @@
+<thlogic>
+    <attr   sel="#headId"
+            th:replace="~{fragments/head :: headFragment}"/>
+
+    <attr   sel="#game-title"
+            th:text="#{game.title}"/>
+    <attr   sel="#enter-guess"
+            th:text="#{game.enter.guess}"/>
+    <attr   sel="#submit"
+            th:value="#{game.submit}"/>
+
+
+    <attr   sel="#main-message"
+            th:text="${__${T(matyja.projects.util.AtributeNames).MAIN_MESSAGE}__}" />
+    <attr   sel="#result-message"
+            th:text="${__${T(matyja.projects.util.AtributeNames).RESULT_MESSAGE}__}"/>
+    <attr   sel="#game-form"
+            th:action="@{__${T(matyja.projects.util.GameMappings).PLAY}__}" />
+    <attr   sel="#footerId"
+            th:replace="~{fragments/foot :: footFragment}"/>
+</thlogic>

@@ -1,0 +1,12 @@
+<thlogic>
+    <attr   sel="#header1"
+            th:replace="~{fragments/head :: headFragment}"/>
+    <attr   sel="#play-game"
+            th:href="@{__${T(matyja.projects.util.GameMappings).PLAY}__}" />
+    <attr   sel="#footer1"
+            th:replace="~{fragments/foot :: footFragment}"/>
+    <attr sel="#welcome-title"
+          th:text="#{game.title}"/>
+    <attr sel="#play-game"
+          th:text="#{game.play}" />
+</thlogic>

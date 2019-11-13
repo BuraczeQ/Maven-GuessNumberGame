@@ -1,30 +1,28 @@
 package matyja.projects;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
 
+@Slf4j
 @Component
 public class MessageGeneratorImpl implements MessageGenerator {
 
     //== Constants ==
-    private static final Logger log = LoggerFactory.getLogger(MessageGeneratorImpl.class);
+    private static final String MAIN_MESSAGE2 = "game.main.message";
 
     //== Fields ==
     @Autowired
-    private Game game;
+    private  Game game;
+    @Autowired
+    private  MessageSource messageSource;
 
 
-    //== Init ==
-    @PostConstruct
-    public void init() {
-        log.info("game = {}", game);
-    }
 
-    // == Public methods ==
+// == Public methods ==
 
 
     @Override
@@ -33,11 +31,17 @@ public class MessageGeneratorImpl implements MessageGenerator {
                 " are you ready?" ;
     }
 
+
     @Override
     public String getMainMessage() {
-        return  "The number is between " + game.getSmallest() +
-                " and " + game.getBiggest() ;
-    }
+      return
+            getMessage("game.main.message", game.getSmallest(), game.getBiggest());
+   /*"Number is between " +
+             game.getSmallest() +
+            " and " +
+            game.getBiggest() +
+            ". Can you guess it?";*/}
+
 
     @Override
     public String getResultMessage() {
@@ -56,7 +60,9 @@ public class MessageGeneratorImpl implements MessageGenerator {
                             " guesses left";
         }
     }
-
+    private String getMessage(String code, Object... args) {
+        return messageSource.getMessage(code, args, LocaleContextHolder.getLocale());
+    }
 
 
 

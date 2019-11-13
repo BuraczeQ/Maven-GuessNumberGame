@@ -34,6 +34,7 @@ public class GameController {
 
         if(gameService.isGameOver()){
             return ViewNames.GAME_OVER;
+
         }return ViewNames.PLAY;
     }
 
@@ -42,5 +43,11 @@ public class GameController {
         log.info("guess = {}, guess");
         gameService.checkGuess(guess);
         return GameMappings.REDIRECT_PLAY;
+    }
+
+    @GetMapping(GameMappings.RESTART)
+    public String restart(){
+    gameService.reset();
+    return GameMappings.REDIRECT_PLAY;
     }
 }

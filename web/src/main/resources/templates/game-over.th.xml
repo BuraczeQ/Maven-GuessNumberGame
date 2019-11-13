@@ -1,0 +1,25 @@
+<thlogic>
+    <attr   sel="#header"
+            th:replace="~{fragments/head :: headFragment}"/>
+    <attr   sel="#result-message"
+            th:text="${__${T(matyja.projects.util.AtributeNames).RESULT_MESSAGE}__}"/>
+    <attr sel="#game-title"
+          th:text="#{game.title}"/>
+    <attr sel="#welcome-message"
+          th:text="#{game.title}"/>
+    <attr sel="#game-over"
+          th:text="#{game.gameOver}"/>
+    <attr sel="#restart"
+          th:text="#{game.playAgain}"/>
+    <attr sel="#home-ref"
+          th:text="#{game.home}"/>
+
+
+
+    <attr   sel="#restart"
+            th:href="@{__${T(matyja.projects.util.GameMappings).RESTART}__}" />
+    <attr   sel="#home-ref"
+            th:href="@{__${T(matyja.projects.util.GameMappings).HOME}__}"/>
+    <attr   sel="#footerID"
+            th:replace="~{fragments/foot :: footFragment}"/>
+</thlogic>

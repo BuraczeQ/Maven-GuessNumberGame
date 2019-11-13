@@ -12,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
             log.info("Guess the number game");
-        SpringApplication.run(Main.class,args);
+        SpringApplication.run(Main.class, args);
 
     }
 }
