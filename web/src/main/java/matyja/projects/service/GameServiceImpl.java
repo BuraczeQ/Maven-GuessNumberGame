@@ -15,6 +15,7 @@ public class GameServiceImpl implements GameService {
     private final Game game;
     private final MessageGenerator messageGenerator;
 
+
 //== Constructor ==
     @Autowired
     public GameServiceImpl(Game game, MessageGenerator messageGenerator) {

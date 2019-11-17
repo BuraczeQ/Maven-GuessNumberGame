@@ -50,4 +50,10 @@ public class GameController {
     gameService.reset();
     return GameMappings.REDIRECT_PLAY;
     }
+
+
+    @GetMapping(GameMappings.LOGIN)
+    public String loginPage(){
+        return ViewNames.LOGIN;
+    }
 }

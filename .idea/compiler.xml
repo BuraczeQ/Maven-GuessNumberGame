@@ -9,6 +9,7 @@
         <module name="core" />
         <module name="web" />
         <module name="console" />
+        <module name="dataBase" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +20,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="console" options="-parameters" />
       <module name="core" options="-parameters" />
+      <module name="dataBase" options="-parameters" />
       <module name="web" options="-parameters" />
     </option>
   </component>
