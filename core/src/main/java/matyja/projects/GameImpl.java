@@ -14,10 +14,9 @@ public class GameImpl implements Game {
     private static final Logger log = LoggerFactory.getLogger(GameImpl.class);
 
     // == Fields ==
-
     @Autowired
     private NumberGenerator numberGenerator;
-
+    @Autowired
     private int guessCount;
     private int number;
     private int guess;

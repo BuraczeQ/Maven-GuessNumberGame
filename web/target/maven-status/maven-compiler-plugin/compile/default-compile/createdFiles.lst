@@ -5,5 +5,6 @@ matyja\projects\service\GameService.class
 matyja\projects\util\GameMappings.class
 matyja\projects\util\thymeleaf\DecoupledLogicSetup.class
 matyja\projects\service\GameServiceImpl.class
+matyja\projects\interceotor\RequestInterceptor.class
 matyja\projects\controller\GameController.class
 matyja\projects\util\ViewNames.class
